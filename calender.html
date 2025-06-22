@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calendar with Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="appContainer">
+    
+    <div class="calendarBox">
+        <div class="calendarTop">
+            <button onclick="changeMonth(-1)">&#128072;</button> <!-- this changes month (previous month)-->
+            <h3 id="Myear"></h3>
+            <button onclick="changeMonth(1)">&#128073;</button> <!--this changes month (next month)-->
+        </div>
+        <div class="daysGrid" id="Cdays"></div> <!-- Grid to display each day in calendar-->
+    </div>
+
+    <div class="eventList">
+        <h4>All Events</h4>
+        <table id="eventTable">
+            <thead>
+                <tr>
+                    <th>Date</th> <!--Date of the stored event-->
+                    <th>Description</th> <!--Description of the added event-->
+                </tr>
+            </thead>
+            <tbody><!--this is the table body where events will be added-->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="eventPopup" id="eventPopup"> <!--This is the popup that opens when you click on a specific date.-->
+    <div class="popupContent">
+        <h4>Add Event</h4>
+        <p id="eventDate"></p>
+        <input type="text" id="eventDescription" placeholder="Event description"><!--input text for event description)-->
+        <button onclick="addEvent()">Save Event</button>
+        <button onclick="closePopup()">Cancel</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+ <!-- To add event = add event name and save 
+ To remove event = clear event description and save
+ calandar using local storage to save the events added to calandar -->
+ 

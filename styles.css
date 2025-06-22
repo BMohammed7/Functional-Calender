@@ -1,0 +1,140 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e6637d;
+}
+
+.appContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.calendarBox {
+    width: 500px;
+    background-color: #fffff0;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+.calendarTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
+}
+
+.calendarTop button {
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #7ba5db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.calendarTop button:hover {
+    background-color: #80c4c2;
+}
+
+.daysGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    font-size: 16px;
+}
+
+.day {
+    padding: 15px;
+    background-color: #00c4f0;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.day:hover {
+    background-color: #6bc7db;
+}
+
+.dayHeader {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+
+.eventList {
+    width: 300px;
+    background-color: #fffff0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.eventList table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.eventList th, .eventList td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.eventPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popupContent {
+    background: #fffff0;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+}
+
+.popupContent input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.popupContent button {
+    padding: 10px 15px;
+    background-color: #a0c9f2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popupContent button:hover {
+    background-color: #6baced;
+}
+
+
